@@ -423,7 +423,6 @@ namespace LiteNetLib
                 peersToRemove.Clear();
 #if STATS_ENABLED
                 Statistics.PacketLoss = totalPacketLoss;
-                Statistics.ProcessTime = (ulong)((DateTime.UtcNow.Ticks - startTime) / TimeSpan.TicksPerMillisecond);
 #endif
                 int sleepTime = UpdateTime - (int)((DateTime.UtcNow.Ticks - startTime) / TimeSpan.TicksPerMillisecond);
                 if (sleepTime > 0)

@@ -2,7 +2,6 @@
 {
     public sealed class NetStatistics
     {
-        public ulong ProcessTime;
         public ulong PacketsSent;
         public ulong PacketsReceived;
         public ulong BytesSent;
@@ -28,14 +27,13 @@
         {
             return
                 string.Format(
-                    "BytesReceived: {0}\nPacketsReceived: {1}\nBytesSent: {2}\nPacketsSent: {3}\nPacketLoss: {4}\nPacketLossPercent: {5}\nProcess Time: {6}\n",
+                    "BytesReceived: {0}\nPacketsReceived: {1}\nBytesSent: {2}\nPacketsSent: {3}\nPacketLoss: {4}\nPacketLossPercent: {5}\n",
                     BytesReceived,
                     PacketsReceived,
                     BytesSent,
                     PacketsSent,
                     PacketLoss,
-                    PacketLossPercent,
-                    ProcessTime);
+                    PacketLossPercent);
         }
     }
 }
